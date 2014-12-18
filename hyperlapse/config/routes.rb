@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   # LOCATION ROUTES
   get 'locations' => 'locations#index'
-  get 'locations/:id' => 'locations#show'
+  get 'locations/:lat/:long' => 'locations#show'
+
 
   # SESSIONS ROUTES
   get 'sessions/new' => 'sessions#new', as: 'login'

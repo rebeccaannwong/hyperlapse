@@ -8,4 +8,7 @@ class LocationController < ApplicationController
       @locations = Location.all
     end
   end
+
+  #INDEX, SHOW, NEW, CREATE
+
 end

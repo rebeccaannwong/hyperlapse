@@ -1,4 +1,0 @@
-class HyperlapseController < ApplicationController
-
-
-end

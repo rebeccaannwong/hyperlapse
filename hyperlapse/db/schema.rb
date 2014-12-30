@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 20141218174438) do
 
   create_table "users", force: true do |t|
     t.string "username"
-    t.string "email"
+    t.string "firstname"
+    t.string "lastname"
     t.string "password_digest"
   end
 

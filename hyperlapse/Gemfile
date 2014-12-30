@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 gem 'pry-rails', group: :development
 gem 'httparty'
 
-gem 'awesome_print'
+gem 'awesome_print', '~> 1.2.0'
 
 group :development do
   gem 'rspec-rails'
@@ -43,6 +43,9 @@ gem 'json', '~> 1.8.1'
 
 gem 'rails_12factor', group: :production
 
+gem 'sqlite3'
+gem 'nifty-generators'
+
 gem "geocoder"
 
 # Use unicorn as the app server
@@ -53,3 +56,5 @@ gem "geocoder"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test

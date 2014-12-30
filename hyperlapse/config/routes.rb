@@ -12,11 +12,10 @@ Rails.application.routes.draw do
   post 'sessions/new'=> 'sessions#create'
   delete 'sessions'  => 'sessions#destroy'
 
-  # USERS ROUTE
+  #USERS ROUTE
+  get "/users/:id" => "users#show"
+
   resources :users, only: [:new, :create, :show]
-
-
-
 
 
 end

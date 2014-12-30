@@ -14,8 +14,8 @@ class FoursquareAPI
         long: venue["venue"]["location"]["lng"],
         lat: venue["venue"]["location"]["lat"],
         address: venue["venue"]["location"]["formattedAddress"],
-      # venuehash[:prefix] = venue["venue"]["categories"][0]["icon"]["prefix"]
-      # venuehash[:suffix] = venue["venue"]["categories"][0]["icon"]["suffix"]
+        prefix: = venue["venue"]["categories"][0]["icon"]["prefix"]
+        suffix: = venue["venue"]["categories"][0]["icon"]["suffix"]
       }
     end
     venueInfo

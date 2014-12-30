@@ -1,15 +1,222 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+/*LINKS*/
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+
+}
+
+a:hover {
+  background: white;
+  opacity: 0.8;
+  color: white;
+}
+
+
+/*BODY*/
+body.homepage {
+  font-family: Raleway;
+  margin: 0 auto;
+  background: url(<%= image_path 'searchbar1.jpg' %>) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: Raleway;
+  background-size: cover;
+  margin: 0 auto;
+  background: url(<%= image_path 'backgroundimage.jpg' %>) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*LAYOUT*/
+#homeicon {
+  position: absolute;
+  left: 95%;
+  top: 2%;
+  opacity: 0.6;
+  max-width: 200px;
+}
+
+#main {
+  font-size: 16px;
+  color: white;
+}
+
+#nav {
+  color: white;
+}
+
+/*INDEX*/
+#logo {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#title {
+  text-align: center;
+  font-family: Roboto Slab;
+  font-size: 75px;
+  color: mintcream;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  margin-top: -80px;
+}
+
+#links {
+  color: white;
+  font-size: 20px;
+  float: left;
+  margin-top: -50px;
+}
+
+
+#zipform {
+  color: black;
+  margin-top: 10px;
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.submit input{
+  margin-left: 4.5em;
+}
+
+
+/*RESULTS PAGE*/
+.results {
+  background: white;
+  opacity: 0.7;
+  font-size: 20px;
+  color: black;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+
+}
+
+.resultsimg {
+  margin-top: -20px;
+  float: right;
+}
+
+.resultname {
+  color: black;
+}
+
+
+/*QUIZ IMAGES*/
+.quiz_grid {
+  height: 80%;
+  width: 84%;
+  margin: 0 auto;
+}
+
+.quiz_image input{
+  width: 48%;
+  height: 47%;
+  float: left;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+/*HEADERS*/
+h1 {
+  text-align: center;
+  font-family: Roboto Slab;
+  font-size: 50px;
+  color: mintcream;
+}
+h5 {
+  text-align: center;
+  font-family: Raleway;
+  font-size: 16px;
+  color: mintcream;
+}
+
+
+/* CAPTION BAR */
+.caption {
+  padding:20px;
+  width:100%;
+  color: black;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:hidden;
+}
+
+.transparency  {
+  opacity:0.5;
+  filter:alpha(opacity=50);
+  -moz-opacity:0.5;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:-1;
+}
+
+h6  {
+  position: relative;
+  top: -15px;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 25px;
+  color: white;
+}
+
+
+/*FORMS*/
+input, select, textarea {
+  font-family : Raleway;
+  font-size   : 100%;
+}
+
+.field {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+label {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}

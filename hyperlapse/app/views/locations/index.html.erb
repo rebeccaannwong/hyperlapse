@@ -1,5 +1,20 @@
 <h1>List of Locations</h1>
 <!--  Locations index page - iterate through variable, generate a link using the name and putting the lat and long in the link (remember that you need to do URL escape) -->
 
+<% if @locations.length == 0 %>
+  <%= link_to "Your search yielded no results. Please try again.", '/', style: 'color:black;'%>
+<% else %>
+  <% @locations.each do |location| %>
+    <div id="location">
+      <%= location[:name] %>
+      <% location[:address].each do |address| %>
+        <%= address %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+
+
 
 </section>

@@ -8,18 +8,17 @@ class FoursquareAPI
 
   def self.get_foursquare_info(lat,long)
     venues = foursquare(lat,long)
-    venueInfo = []
-    venues.each do |venue|
-      venuehash = {}
-      venuehash[:name] = venue["venue"]["name"]
-      venuehash[:long] = venue["venue"]["location"]["lng"]
-      venuehash[:lat] = venue["venue"]["location"]["lat"]
-      venuehash[:address] = venue["venue"]["location"]["formattedAddress"]
+    venueInfo = venues.map do |venue|
+      {
+        name: venue["venue"]["name"],
+        long: venue["venue"]["location"]["lng"],
+        lat: venue["venue"]["location"]["lat"],
+        address: venue["venue"]["location"]["formattedAddress"],
       # venuehash[:prefix] = venue["venue"]["categories"][0]["icon"]["prefix"]
       # venuehash[:suffix] = venue["venue"]["categories"][0]["icon"]["suffix"]
-      venueInfo.push(venuehash)
+      }
     end
-    return venueInfo
+    venueInfo
   end
 
   # def self.get_address
@@ -39,11 +38,5 @@ class FoursquareAPI
     return {lat: lat, long: long}
   end
 
-  # def self.get_current_location
-  #   location = Geocoder.search(HTTParty.get('http://api.ipify.org?format=json')["ip"])[0]
-  #   lat = location.data["latitude"]
-  #   long = location.data["longitude"]
-  #   return {lat: lat, long: long}
-  # end
 
 end
